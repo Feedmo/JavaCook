@@ -1,6 +1,5 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.ConsolePrint;
 import reading.dsAndAlgos.swordPointOffer.util.entity.ListNode;
 import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
 
@@ -31,7 +30,7 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode<Integer> head = TestData.ListNodeInteger();
+        ListNode<Integer> head = TestData.listNodeInteger();
 
         ListNode<Integer> reversedListNode = solution(head);
 

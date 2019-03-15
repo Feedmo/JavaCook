@@ -1,9 +1,7 @@
 package reading.dsAndAlgos.howTomcatWorks;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 /**
  * created by ran
@@ -17,25 +15,26 @@ public class Request {
     }
 
     public void parse() {
+        StringBuilder sb = new StringBuilder(2048);
+        byte[] buffer = new byte[2048];
+        int i;
+
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-            StringBuilder sb = new StringBuilder();
-            String line;
-
-            while ((line = reader.readLine()) != null) {
-                sb.append(line).append("\n");
-            }
-
-            String requestString = sb.toString();
-            System.out.println(requestString);
-
-            uri = parseUri(requestString);
+            i = input.read(buffer);
         } catch (IOException e) {
             e.printStackTrace();
+            i = -1;
         }
+
+        for (int j = 0; j < i; j++) {
+            sb.append((char) buffer[j]);
+        }
+
+        System.out.println("requestString: " + sb);
+        uri = parseUri(sb.toString());
     }
 
-    public String parseUri(String requestString) {
+    private String parseUri(String requestString) {
         int index1 = requestString.indexOf(' ');
         if (index1 != -1) {
             int index2 = requestString.indexOf(' ', index1 + 1);
@@ -44,5 +43,9 @@ public class Request {
             }
         }
         return null;
+    }
+
+    public String getUri() {
+        return uri;
     }
 }

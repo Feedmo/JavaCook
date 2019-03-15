@@ -27,7 +27,7 @@ public class FindKthNodeFromTail {
     }
 
     public static void main(String[] args) {
-        ListNode<Integer> node1 = TestData.ListNodeInteger();
+        ListNode<Integer> node1 = TestData.listNodeInteger();
 
         ListNode<Integer> result1 = solution(node1, 3);
         ListNode<Integer> result2 = solution(node1, 1);
