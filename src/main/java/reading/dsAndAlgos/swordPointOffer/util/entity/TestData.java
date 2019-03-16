@@ -34,14 +34,14 @@ public class TestData {
      *                   1   6  8  10
      * @return {@link BinaryTreeNode}
      */
-    public static BinaryTreeNode binaryTreeNodeInteger() {
-        BinaryTreeNode node1 = new BinaryTreeNode();
-        BinaryTreeNode node2 = new BinaryTreeNode();
-        BinaryTreeNode node3 = new BinaryTreeNode();
-        BinaryTreeNode node4 = new BinaryTreeNode();
-        BinaryTreeNode node5 = new BinaryTreeNode();
-        BinaryTreeNode node6 = new BinaryTreeNode();
-        BinaryTreeNode node7 = new BinaryTreeNode();
+    public static BinaryTreeNode<Integer> binaryTreeNodeInteger() {
+        BinaryTreeNode<Integer> node1 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node2 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node3 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node4 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node5 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node6 = new BinaryTreeNode<>();
+        BinaryTreeNode<Integer> node7 = new BinaryTreeNode<>();
         node1.value = 7;
         node2.value = 3;
         node3.value = 1;

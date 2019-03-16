@@ -8,7 +8,7 @@ import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
  * created by ran
  */
 public class FindSubTree {
-    private static boolean solution(BinaryTreeNode sup, BinaryTreeNode sub) {
+    private static <T extends Comparable<T>> boolean solution(BinaryTreeNode<T> sup, BinaryTreeNode<T> sub) {
         if (sup == sub || sub == null) {
             return true;
         }
@@ -16,7 +16,7 @@ public class FindSubTree {
             return false;
         }
 
-        int cmp = sup.value - sub.value;
+        int cmp = sup.value.compareTo(sub.value);
         if (cmp < 0) {
             return solution(sup.right, sub);
         } else if (cmp > 0) {
@@ -27,10 +27,10 @@ public class FindSubTree {
     }
 
     public static void main(String[] args) {
-        BinaryTreeNode sup = TestData.binaryTreeNodeInteger();
+        BinaryTreeNode<Integer> sup = TestData.binaryTreeNodeInteger();
         System.out.println(solution(sup, sup.left));
 
-        BinaryTreeNode node11 = new BinaryTreeNode();
+        BinaryTreeNode<Integer> node11 = new BinaryTreeNode<>();
         node11.value = 11;
         System.out.println(solution(sup, node11));
     }
