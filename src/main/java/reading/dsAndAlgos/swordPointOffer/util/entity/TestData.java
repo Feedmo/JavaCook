@@ -64,4 +64,23 @@ public class TestData {
                 "                        1   6  8  10\n--------------------------");
         return node1;
     }
+
+    public static int[][] matrixInt() {
+        int[][] result = {
+                {1, 2, 8, 9},
+                {2, 4, 9, 12},
+                {4, 7, 10, 13},
+                {6, 8, 11, 15}
+        };
+        return result;
+    }
+
+    public static void printMatrixTestData() {
+        System.out.println("{\n" +
+                "    {1, 2, 8, 9},\n" +
+                "    {2, 4, 9, 12},\n" +
+                "    {4, 7, 10, 13},\n" +
+                "    {6, 8, 11, 15}\n" +
+                "}\n---------------------------------------");
+    }
 }

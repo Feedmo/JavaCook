@@ -1,6 +1,8 @@
 # idea
 .idea/
 *.iml
+target/
+resources/
 
 # Compiled class file
 *.class
