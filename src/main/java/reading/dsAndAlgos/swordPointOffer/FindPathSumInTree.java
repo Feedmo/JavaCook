@@ -1,7 +1,7 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.BinaryTreeNode;
-import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
+import reading.dsAndAlgos.util.entity.BinaryTreeNode;
+import reading.dsAndAlgos.util.entity.TestData;
 
 /**
  * 查找二叉树中是否存在根结点到叶子节点的节点和为指定数值的路径

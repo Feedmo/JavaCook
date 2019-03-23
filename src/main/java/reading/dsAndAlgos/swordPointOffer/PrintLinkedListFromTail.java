@@ -1,6 +1,6 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.ListNode;
+import reading.dsAndAlgos.util.entity.ListNode;
 
 import java.util.Stack;
 

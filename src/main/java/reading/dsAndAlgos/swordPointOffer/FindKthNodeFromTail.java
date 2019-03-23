@@ -1,7 +1,7 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.ListNode;
-import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
+import reading.dsAndAlgos.util.entity.ListNode;
+import reading.dsAndAlgos.util.entity.TestData;
 
 /**
  * 查找链表的倒数第K个结点

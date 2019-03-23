@@ -1,7 +1,9 @@
-package reading.dsAndAlgos.swordPointOffer.util;
+package reading.dsAndAlgos.util;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.BinaryTreeNode;
-import reading.dsAndAlgos.swordPointOffer.util.entity.ListNode;
+import reading.dsAndAlgos.util.entity.BinaryTreeNode;
+import reading.dsAndAlgos.util.entity.ListNode;
+
+import java.util.Stack;
 
 /**
  * created by ran
@@ -37,6 +39,12 @@ public class ConsolePrint {
                 System.out.print(i + " ");
             }
             System.out.println();
+        }
+    }
+
+    public static void printStack(Stack<Integer> stack) {
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
         }
     }
 }

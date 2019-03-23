@@ -1,8 +1,8 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.BinaryTreeNode;
+import reading.dsAndAlgos.util.entity.BinaryTreeNode;
 
-import static reading.dsAndAlgos.swordPointOffer.util.ConsolePrint.printTree;
+import static reading.dsAndAlgos.util.ConsolePrint.printTree;
 
 /**
  * note 运行出错了，打算重启再试试

@@ -1,6 +1,6 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
+import reading.dsAndAlgos.util.entity.TestData;
 
 /**
  * 在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。

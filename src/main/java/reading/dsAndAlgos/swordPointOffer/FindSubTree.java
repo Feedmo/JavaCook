@@ -1,7 +1,7 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.entity.BinaryTreeNode;
-import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
+import reading.dsAndAlgos.util.entity.BinaryTreeNode;
+import reading.dsAndAlgos.util.entity.TestData;
 
 /**
  * 输入两棵二叉树A和B，判断B是不是A的子结构

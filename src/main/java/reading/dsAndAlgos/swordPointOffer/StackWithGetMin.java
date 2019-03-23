@@ -3,11 +3,17 @@ package reading.dsAndAlgos.swordPointOffer;
 import java.util.Stack;
 
 /**
+ * time: O(1) space: O(n)
  * created by ran
  */
 public class StackWithGetMin<T extends Comparable<T>> {
-    private Stack<T> dataStack = new Stack<>();
-    private Stack<T> minStack = new Stack<>();
+    private Stack<T> dataStack;
+    private Stack<T> minStack;
+
+    public StackWithGetMin() {
+        dataStack = new Stack<>();
+        minStack = new Stack<>();
+    }
 
     public T getMin() {
         if (minStack.isEmpty()) {
@@ -16,14 +22,14 @@ public class StackWithGetMin<T extends Comparable<T>> {
         return minStack.peek();
     }
 
-    public void push(T t) {
+    public void push1(T t) {
         dataStack.push(t);
         if (minStack.size() == 0 || minStack.peek().compareTo(t) > 0) {
             minStack.push(t);
         }
     }
 
-    public T pop() {
+    public T pop1() {
         if (dataStack.isEmpty()) {
             throw new RuntimeException("empty stack");
         }
@@ -34,4 +40,22 @@ public class StackWithGetMin<T extends Comparable<T>> {
         }
         return result;
     }
+
+    public void push2(T t) {
+        if (minStack.isEmpty() || minStack.peek().compareTo(t) > 0) {
+            minStack.push(t);
+        } else {
+            minStack.push(minStack.peek());
+        }
+        dataStack.push(t);
+    }
+
+    public T pop2() {
+        if (dataStack.isEmpty()) {
+            throw new RuntimeException("...");
+        }
+        minStack.pop();
+        return dataStack.pop();
+    }
+
 }

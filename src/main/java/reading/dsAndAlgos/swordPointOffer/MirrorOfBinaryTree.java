@@ -1,8 +1,8 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.swordPointOffer.util.ConsolePrint;
-import reading.dsAndAlgos.swordPointOffer.util.entity.BinaryTreeNode;
-import reading.dsAndAlgos.swordPointOffer.util.entity.TestData;
+import reading.dsAndAlgos.util.ConsolePrint;
+import reading.dsAndAlgos.util.entity.BinaryTreeNode;
+import reading.dsAndAlgos.util.entity.TestData;
 
 /**
  * 二叉树的镜像

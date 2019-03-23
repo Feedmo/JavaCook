@@ -1,4 +1,4 @@
-package reading.dsAndAlgos.howTomcatWorks;
+package reading.dsAndAlgos.howTomcatWorks.ch01;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,6 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * 接收请求，后续工作委托给request和response实例完成
  * created by ran
  */
 public class HttpServer {

@@ -1,4 +1,4 @@
-package reading.dsAndAlgos.howTomcatWorks;
+package reading.dsAndAlgos.howTomcatWorks.ch01;
 
 import java.io.*;
 
@@ -29,9 +29,10 @@ public class Response {
     public void sendStaticResource() throws IOException {
         byte[] bytes = new byte[BUFFER_SIZE];
         File file = new File(HttpServer.WEB_ROOT, request.getUri());
-        System.out.println("output file path: " + file.getAbsolutePath());
+        System.out.println("Output file path: " + file.getAbsolutePath());
         FileInputStream fis = null;
 
+        // note 因为输入输出流有各自的实现，相互间不能直接传输，所以使用字节数组座位中间转换，nio可以改善这一点？？
         if (file.exists()) {
             fis = new FileInputStream(file);
             int ch = fis.read(bytes, 0, BUFFER_SIZE);

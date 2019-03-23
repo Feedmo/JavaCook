@@ -1,4 +1,4 @@
-package reading.dsAndAlgos.howTomcatWorks;
+package reading.dsAndAlgos.howTomcatWorks.ch01;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +15,7 @@ public class Request {
     }
 
     public void parse() {
+        // trans byte stream to str format
         StringBuilder sb = new StringBuilder(2048);
         byte[] buffer = new byte[2048];
         int i;

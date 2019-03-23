@@ -1,4 +1,4 @@
-package reading.dsAndAlgos.swordPointOffer.util.entity;
+package reading.dsAndAlgos.util.entity;
 
 /**
  * created by ran
