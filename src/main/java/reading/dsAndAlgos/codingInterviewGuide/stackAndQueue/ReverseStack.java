@@ -1,8 +1,8 @@
-package reading.dsAndAlgos.codingInterviewGuide;
+package reading.dsAndAlgos.codingInterviewGuide.stackAndQueue;
 
 import java.util.Stack;
 
-import static reading.dsAndAlgos.util.ConsolePrint.printStack;
+import static reading.dsAndAlgos.util.ConsolePrinter.printStack;
 
 /**
  * created by ran

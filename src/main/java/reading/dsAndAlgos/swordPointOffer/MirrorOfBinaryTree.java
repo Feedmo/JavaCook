@@ -1,6 +1,6 @@
 package reading.dsAndAlgos.swordPointOffer;
 
-import reading.dsAndAlgos.util.ConsolePrint;
+import reading.dsAndAlgos.util.ConsolePrinter;
 import reading.dsAndAlgos.util.entity.BinaryTreeNode;
 import reading.dsAndAlgos.util.entity.TestData;
 
@@ -23,6 +23,6 @@ public class MirrorOfBinaryTree {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = TestData.binaryTreeNodeInteger();
         mirror(root);
-        ConsolePrint.printTree(root);
+        ConsolePrinter.printTree(root);
     }
 }

@@ -3,7 +3,7 @@ package reading.dsAndAlgos.swordPointOffer;
 import reading.dsAndAlgos.util.entity.ListNode;
 import reading.dsAndAlgos.util.entity.TestData;
 
-import static reading.dsAndAlgos.util.ConsolePrint.printNode;
+import static reading.dsAndAlgos.util.ConsolePrinter.printNode;
 
 /**
  * 定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点

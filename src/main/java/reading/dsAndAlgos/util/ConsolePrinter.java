@@ -8,7 +8,7 @@ import java.util.Stack;
 /**
  * created by ran
  */
-public class ConsolePrint {
+public class ConsolePrinter {
     /**
      * print BinaryTreeNode in-order format
      * @param nodeList {@link BinaryTreeNode}
@@ -36,6 +36,15 @@ public class ConsolePrint {
     public static void printArray(int[] array) {
         if (array != null && array.length > 0) {
             for (int i : array) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static <T> void printArray(T[] array) {
+        if (array != null && array.length > 0) {
+            for (T i : array) {
                 System.out.print(i + " ");
             }
             System.out.println();

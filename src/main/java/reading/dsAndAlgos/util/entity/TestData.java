@@ -83,4 +83,14 @@ public class TestData {
                 "    {6, 8, 11, 15}\n" +
                 "}\n---------------------------------------");
     }
+
+    public static int[] arrayInt() {
+        int[] result = {4, 1, 6, 9, 0, -2, 7, 3};
+        printArrayIntTestData();
+        return result;
+    }
+
+    public static void printArrayIntTestData() {
+        System.out.println("{4, 1, 6, 9, 0, -2, 7, 3}");
+    }
 }

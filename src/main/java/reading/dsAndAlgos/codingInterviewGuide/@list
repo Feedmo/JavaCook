@@ -1,3 +1,7 @@
+<!-- 不要轻易去改已经完成的题，不然会产生不必要的版本，之后只用作回顾时作对照 -->
 StackWithGetMin (done in package swordPointOffer)
 BuildQueueWithTwoStack (done in package swordPointOffer)
-ReverseStack 利用递归逆序栈中的元素
+ReverseStack 利用递归逆序栈中的元素 [*]
+CatDogQueue
+SortStackUsingStack [*]
+HanoiProblem [*]

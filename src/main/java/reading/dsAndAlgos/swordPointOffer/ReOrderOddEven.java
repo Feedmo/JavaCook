@@ -2,7 +2,7 @@ package reading.dsAndAlgos.swordPointOffer;
 
 import java.security.InvalidParameterException;
 
-import static reading.dsAndAlgos.util.ConsolePrint.printArray;
+import static reading.dsAndAlgos.util.ConsolePrinter.printArray;
 
 /**
  * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，
