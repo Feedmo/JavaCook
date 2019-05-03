@@ -5,6 +5,12 @@ package designPattern.observer;
  */
 public class ConcreteObserver implements Observer {
     private float temp, humidity, pressure;
+    private Subject subject;
+
+    ConcreteObserver(Subject subject) {
+        this.subject = subject;
+        subject.registerObserver(this);
+    }
 
     @Override
     public void update(float temp, float humidity, float pressure) {
@@ -14,7 +20,7 @@ public class ConcreteObserver implements Observer {
         display();
     }
 
-    void display() {
+    private void display() {
         System.out.println(temp + " " + humidity + " " + pressure);
     }
 }

@@ -152,6 +152,7 @@ public class Request implements ServletRequest {
         return null;
     }
 
+    @Deprecated
     public String getRealPath(String s) {
         return null;
     }
