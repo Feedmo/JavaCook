@@ -89,7 +89,8 @@ public class StopThreadUnsafe {
             Thread t = new ChangeObjectThread();
             t.start();
             Thread.sleep(200);
-            t.stop();
+            // 测试的时候打开下面这行
+            // t.stop();
         }
     }
 }
