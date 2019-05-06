@@ -5,9 +5,9 @@ package lang.concurrency;
  */
 public class SynchronizedUsage implements Runnable {
     private static final SynchronizedUsage su = new SynchronizedUsage();
-    private static volatile int i = 0;
+    private static int i = 0;
 
-    // 如果没有设定线程临界区，IDEA会提示 Non-atomic operation on volatile field
+    // 如果没有设定同步代码块，IDEA会提示 Non-atomic operation on volatile field
     /*void increase() {
         i++;
     }*/
@@ -20,18 +20,19 @@ public class SynchronizedUsage implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             increase();
         }
     }
 
     public static void main(String[] args) throws InterruptedException {
+        SynchronizedUsage su = new SynchronizedUsage();
         Thread t1 = new Thread(su);
         Thread t2 = new Thread(su);
         t1.start(); t2.start();
         t1.join(); t2.join();
 
-        // 若没有对变量i进行线程并发控制，线程对数据的修改会相互覆盖，导致最终i的值会小于2000
+        // 若没有对变量i进行线程并发控制，线程对数据的修改可能会相互覆盖，导致最终i的值会小于2000
         System.out.println(i);
     }
 }
