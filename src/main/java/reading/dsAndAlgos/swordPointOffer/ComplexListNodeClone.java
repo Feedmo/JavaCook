@@ -48,6 +48,7 @@ public class ComplexListNodeClone {
         Node newNode = node.next;
         Node ptr = newNode;
 
+        // 使用while(true)而不是while(node!=null)的原因是循环后续会用到更新后(node.next)的node，因此需要在循环内判断
         while (true) {
             node.next = ptr.next;
             if (node.next == null) break;

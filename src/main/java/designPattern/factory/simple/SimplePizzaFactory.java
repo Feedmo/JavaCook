@@ -5,7 +5,7 @@ import designPattern.factory.Pizza;
 
 class SimplePizzaFactory {
 
-    Pizza createPizza(String type) {
+    static Pizza createPizza(String type) {
         Pizza pizza = null;
 
         if (type.equals("...")) {

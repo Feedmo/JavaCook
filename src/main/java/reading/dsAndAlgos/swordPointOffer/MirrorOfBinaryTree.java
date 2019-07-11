@@ -12,6 +12,7 @@ public class MirrorOfBinaryTree {
     private static <T extends Comparable<T>> void mirror(BinaryTreeNode<T> node) {
         if (node == null) return;
 
+        // each recursion only exchange the sub-child(not children)
         BinaryTreeNode<T> tmp = node.left;
         node.left = node.right;
         node.right = tmp;
@@ -23,6 +24,6 @@ public class MirrorOfBinaryTree {
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = TestData.binaryTreeNodeInteger();
         mirror(root);
-        ConsolePrinter.printTree(root);
+        ConsolePrinter.printTreePreOrder(root);
     }
 }

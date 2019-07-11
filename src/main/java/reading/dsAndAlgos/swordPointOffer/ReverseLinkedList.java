@@ -15,18 +15,16 @@ public class ReverseLinkedList {
             return head;
         }
 
-        ListNode<T> ptr = new ListNode<>();
-        ptr.next = null;
+        ListNode<T> before = null;
+        ListNode<T> after;
 
-        ListNode<T> next;
         while (head != null) {
-            next = head.next;
-            head.next = ptr.next;
-            ptr.next = head;
-            head = next;
+            after = head.next;
+            head.next = before;
+            before = head;
+            head = after;
         }
-
-        return ptr.next;
+        return before;
     }
 
     public static void main(String[] args) {

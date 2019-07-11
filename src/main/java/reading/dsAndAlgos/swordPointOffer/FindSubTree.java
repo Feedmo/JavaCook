@@ -9,6 +9,7 @@ import reading.dsAndAlgos.util.entity.TestData;
  */
 public class FindSubTree {
     private static <T extends Comparable<T>> boolean solution(BinaryTreeNode<T> sup, BinaryTreeNode<T> sub) {
+        // the condition to return true
         if (sup == sub || sub == null) {
             return true;
         }

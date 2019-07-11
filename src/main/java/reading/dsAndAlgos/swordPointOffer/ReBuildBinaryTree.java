@@ -2,10 +2,10 @@ package reading.dsAndAlgos.swordPointOffer;
 
 import reading.dsAndAlgos.util.entity.BinaryTreeNode;
 
-import static reading.dsAndAlgos.util.ConsolePrinter.printTree;
+import static reading.dsAndAlgos.util.ConsolePrinter.printTreeInOrder;
 
 /**
- * note 运行出错了，打算重启再试试
+ * bottom up
  * 根据前序遍历和中序遍历构建二叉树
  *
  * preOrder: [1] 2 4 7 3 5 6 8
@@ -24,7 +24,7 @@ import static reading.dsAndAlgos.util.ConsolePrinter.printTree;
  */
 public class ReBuildBinaryTree {
 
-    private static BinaryTreeNode constructor(int[] preOrder, int[] inOrder) {
+     private static BinaryTreeNode constructor(int[] preOrder, int[] inOrder) {
         if (preOrder == null || inOrder == null || preOrder.length == 0 || preOrder.length != inOrder.length) {
             return null;
         }
@@ -39,12 +39,12 @@ public class ReBuildBinaryTree {
 
         int value = preOrder[ps];
         int index = is;
-        while (index <= ie && value != inOrder[index]) {
+        while (index <= ie && inOrder[index] != value) {
             index++;
         }
 
         if (index > ie) {
-            throw new RuntimeException("Invalid input");
+            throw new RuntimeException("Invalid input, can't find root in inOrder");
         }
 
         BinaryTreeNode node = new BinaryTreeNode();
@@ -61,6 +61,6 @@ public class ReBuildBinaryTree {
         int[] inOrder = {4, 7, 2, 1, 5, 3, 8, 6};
 
         BinaryTreeNode root = constructor(preOrder, inOrder);
-        printTree(root);
+        printTreeInOrder(root);
     }
 }

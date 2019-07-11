@@ -20,7 +20,7 @@ public class DeleteNode {
 
         if (target.next == null) {
             ListNode<Integer> tmp = head;
-            while (tmp.next != null) {
+            while (tmp.next != target) {
                 tmp = tmp.next;
             }
             tmp.next = null;

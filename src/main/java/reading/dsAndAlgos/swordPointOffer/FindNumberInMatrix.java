@@ -9,12 +9,13 @@ import reading.dsAndAlgos.util.entity.TestData;
  */
 public class FindNumberInMatrix {
 
-    public static boolean find(int[][] matrix, int n) {
+    public static void find(int[][] matrix, int n) {
         /** 如果 matrix[0].length == 0 判断在前，提示 "matrix.length == 0 is always false when reached"
          * 这里是不是可以仅对 matrix[0].length == 0 做判断就好了呢？
+         * update: once matrix.length != 0, then matrix[0].length != 0 will be guaranteed
          * */
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return false;
+        if (matrix == null || matrix.length == 0) {
+            return;
         }
 
         int rows = matrix.length;
@@ -25,16 +26,15 @@ public class FindNumberInMatrix {
         while (row < rows && col >= 0) {
             int value = matrix[row][col];
             if (n > value) {
-                row++;
+                row++;  // 之后只在这一列寻找直到row=rows退出循环
             } else if (n < value) {
                 col--;
             } else {
                 System.out.println("find " + n);
-                return true;
+                return;
             }
         }
         System.out.println("failed to find " + n);
-        return false;
     }
 
     public static void main(String[] args) {

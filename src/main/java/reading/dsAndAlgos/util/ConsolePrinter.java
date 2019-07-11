@@ -13,12 +13,24 @@ public class ConsolePrinter {
      * print BinaryTreeNode in-order format
      * @param nodeList {@link BinaryTreeNode}
      */
-    public static void printTree(BinaryTreeNode nodeList) {
+    public static void printTreeInOrder(BinaryTreeNode nodeList) {
         if (nodeList == null) return;
 
-        printTree(nodeList.left);
+        printTreeInOrder(nodeList.left);
         System.out.print(nodeList.value + " ");
-        printTree(nodeList.right);
+        printTreeInOrder(nodeList.right);
+    }
+
+    /**
+     * print BinaryTreeNode pre-order format
+     * @param nodeList {@link BinaryTreeNode}
+     */
+    public static void printTreePreOrder(BinaryTreeNode nodeList) {
+        if (nodeList == null) return;
+
+        System.out.print(nodeList.value + " ");
+        printTreePreOrder(nodeList.left);
+        printTreePreOrder(nodeList.right);
     }
 
     /**

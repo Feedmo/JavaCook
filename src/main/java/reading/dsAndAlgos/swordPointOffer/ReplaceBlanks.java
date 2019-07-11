@@ -2,6 +2,7 @@ package reading.dsAndAlgos.swordPointOffer;
 
 /**
  * created by ran
+ *  replace all the blanks in char array by "%20"
  */
 public class ReplaceBlanks {
 

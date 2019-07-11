@@ -1,6 +1,6 @@
 package lang.concurrency;
 
-public class WaitUsage {
+public class    WaitUsage {
     private final static Object object = new Object();
 
     static class T1 extends Thread {

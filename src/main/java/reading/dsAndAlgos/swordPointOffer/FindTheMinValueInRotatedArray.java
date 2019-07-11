@@ -9,7 +9,7 @@ import java.security.InvalidParameterException;
 public class FindTheMinValueInRotatedArray {
     private static int min(int[] array) {
         if (array == null || array.length == 0) {
-            throw new InvalidParameterException();
+            throw new InvalidParameterException()   ;
         }
 
         int lo = 0;
@@ -51,6 +51,7 @@ public class FindTheMinValueInRotatedArray {
         for (int i = 1; i < len; i++) {
             if (array[i] < array[min]) {
                 min = i;
+                break;
             }
         }
         return array[min];

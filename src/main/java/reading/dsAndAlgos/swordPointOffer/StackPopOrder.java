@@ -24,6 +24,7 @@ public class StackPopOrder {
                 stack.pop();
                 popIndex++;
             } else {
+                // now (pushIndex == len) but (stack.peek() != pop[popIndex])
                 return false;
             }
         }
